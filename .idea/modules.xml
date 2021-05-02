@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Численные методы.iml" filepath="$PROJECT_DIR$/Численные методы.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NmLabs.iml" filepath="$PROJECT_DIR$/NmLabs.iml" />
     </modules>
   </component>
 </project>
