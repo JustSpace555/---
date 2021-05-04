@@ -139,7 +139,9 @@ class SLAU(private val matrix: Matrix) {
 			do {
 				val prevX = x.copy()
 				x = eMinusBRev * C * prevX + eMinusBRev * beta
-				epsI = C.norm / (1 - alpha.norm) * (x - prevX).abs().norm
+				epsI = if (alpha.norm < 1)
+					C.norm / (1 - alpha.norm) * (x - prevX).apply(::abs).norm
+				else (x - prevX).apply(::abs).norm
 				i++
 			} while (epsI > inputEps)
 

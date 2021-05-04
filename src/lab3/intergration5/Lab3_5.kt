@@ -1,5 +1,6 @@
 package lab3.intergration5
 
+import kotlin.math.abs
 import kotlin.math.pow
 
 object Lab3_5 {
@@ -13,9 +14,10 @@ object Lab3_5 {
 	private const val Xk = 1
 	private const val h1 = 0.5
 	private const val h2 = 0.25
+	private const val exactValue = -0.1647401421684573
 
 	private fun rectangleMethod(xList: List<Double>, step: Double): Double =
-			xList.windowed(2).map { y(it.sum() / 2) }.sum() * step
+			xList.windowed(2).sumOf { y(it.sum() / 2) } * step
 
 	private fun trapezoidMethod(yList: List<Double>, step: Double): Double = (
 			yList.first() / 2 + yList.slice(1 until yList.lastIndex).sum() + yList.last() / 2
@@ -58,11 +60,24 @@ object Lab3_5 {
 		return output
 	}
 
+	private fun Dot.methodsError(step: Double): Triple<Double, Double, Double> = Triple(
+			rectangleMethod + (calculate(step / 2).last().rectangleMethod - rectangleMethod) / 0.75,
+			trapezoidMethod + (calculate(step / 2).last().trapezoidMethod - trapezoidMethod) / 0.75,
+			simpsonMethod + (calculate(step / 2).last().simpsonMethod - simpsonMethod) / (1 - 0.5.pow(4))
+		)
+
 	operator fun invoke() {
 		println("Integral with step $h1:")
-		println(calculate(h1).joinToString(separator = "\n", postfix = "\n") { it.toString() })
+		val h1Answer = calculate(h1)
+		println(h1Answer.joinToString(separator = "\n", postfix = "\n") { it.toString() })
+		println(h1Answer.last().methodsError(h1).toList().map { abs(it - exactValue) })
+
+		println()
+
 		println("Integral with step $h2:")
-		println(calculate(h2).joinToString(separator = "\n", postfix = "\n") { it.toString() })
-		println("-------------------------------------------------------------------------ё---")
+		val h2Answer = calculate(h2)
+		println(h2Answer.joinToString(separator = "\n", postfix = "\n") { it.toString() })
+		println(h2Answer.last().methodsError(h2).toList().map { abs(it - exactValue) })
+		println("-----------------------------------------------------------------------------")
 	}
 }

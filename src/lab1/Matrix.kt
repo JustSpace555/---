@@ -1,8 +1,10 @@
 package lab1
 
+import java.lang.IllegalArgumentException
 import java.lang.IllegalStateException
 import kotlin.math.abs
 import kotlin.math.round
+import kotlin.math.sqrt
 
 data class Matrix (val array: MutableList<MutableList<Double>>) {
 
@@ -69,15 +71,7 @@ data class Matrix (val array: MutableList<MutableList<Double>>) {
 		round(det)
 	}
 
-	val norm: Double by lazy {
-		var max = 0.0
-		array.forEach { row ->
-			var sum = 0.0
-			row.forEach { sum += abs(it) }
-			if (max < sum) max = sum
-		}
-		max
-	}
+	val norm: Double by lazy { sqrt(array.flatten().sumByDouble { it * it }) }
 
 	operator fun get(index: Int) = array[index].map { it }
 	operator fun get(i: Int, j: Int) = array[i][j]
@@ -210,7 +204,15 @@ data class Matrix (val array: MutableList<MutableList<Double>>) {
 		return E
 	}
 
-	fun abs() = of(array.flatten().map { abs(it) }.chunked(columns))
+	fun concat(other: Matrix): Matrix {
+		if (rows != other.rows) throw IllegalArgumentException("Matrices must have equal row size")
+
+		val output = mutableListOf<List<Double>>()
+		array.forEachIndexed { index, mutableList -> output.add(mutableList + other[index]) }
+		return of(output)
+	}
+
+	fun apply(operation: (Double) -> Double) = of(array.flatten().map { operation(it) }.chunked(columns))
 
 	fun toPrint(): String =
 		array.joinToString("\n") { row ->
