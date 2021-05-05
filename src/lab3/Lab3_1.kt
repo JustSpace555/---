@@ -100,11 +100,11 @@ internal object Lab3_1 {
 	}
 
 	operator fun invoke() {
-		println("Exercise 3.1\nLagrange:")
+		println("Exercise 3.1 - Lagrange:")
 		lagrange()
 		println()
-		println("Exercise 3.1\nNewton:")
+		println("Exercise 3.1 - Newton:")
 		newton()
-		println("-------------------------------------------------------")
+		println("-------------------------------------------------------\n")
 	}
 }

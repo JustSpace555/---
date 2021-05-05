@@ -11,9 +11,9 @@ import lab3.intergration5.Lab3_5
 
 
 fun main() {
-//	Lab3_1()
+	Lab3_1()
 	Lab3_2()
-//	Lab3_3()()
-//	Lab3_4()
-//	Lab3_5()
+	Lab3_4()
+	Lab3_5()
+	Lab3_3()()
 }

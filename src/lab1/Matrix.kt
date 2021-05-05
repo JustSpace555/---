@@ -204,7 +204,7 @@ data class Matrix (val array: MutableList<MutableList<Double>>) {
 		return E
 	}
 
-	fun concat(other: Matrix): Matrix {
+	infix fun concat(other: Matrix): Matrix {
 		if (rows != other.rows) throw IllegalArgumentException("Matrices must have equal row size")
 
 		val output = mutableListOf<List<Double>>()

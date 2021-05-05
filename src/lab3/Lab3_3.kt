@@ -56,7 +56,7 @@ class Lab3_3 : Application() {
 		println("Sum of square errors of first degree polynomial: $sumSquareErrorFirst\n")
 		println("Dots of second degree polynomial: ${funFSecondXList.joinToString(separator = ",") { it.toString() }}")
 		println("Sum of square errors of second degree polynomial: $sumSquareErrorSecond")
-		println("-------------------------------------------------------")
+		println("-------------------------------------------------------\n")
 
 		p0?.let { stage ->
 			stage.title = "Approaching first and second degree polynomials by Michael Moshkov"
@@ -88,5 +88,8 @@ class Lab3_3 : Application() {
 		}
 	}
 
-	operator fun invoke() = launch()
+	operator fun invoke() {
+		println("Exercise 3.3")
+		launch()
+	}
 }

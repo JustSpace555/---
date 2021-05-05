@@ -2,40 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/lab3/Lab3_2.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/Matrix$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NmLabs/lab1/Matrix$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/Matrix$det$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NmLabs/lab1/Matrix$det$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/Matrix$norm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NmLabs/lab1/Matrix$norm$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/Matrix$times$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NmLabs/lab1/Matrix$times$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/Matrix$times$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NmLabs/lab1/Matrix$times$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/Matrix$toPrint$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NmLabs/lab1/Matrix$toPrint$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/Matrix.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NmLabs/lab1/Matrix.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/SLAU$Exercise3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NmLabs/lab1/SLAU$Exercise3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/SLAU$exercise5$finish$1$squareColumnSum$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NmLabs/lab1/SLAU$exercise5$finish$1$squareColumnSum$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/SLAU$exercise5$finish$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NmLabs/lab1/SLAU$exercise5$finish$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/SLAU$rotationMethod$findMax$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NmLabs/lab1/SLAU$rotationMethod$findMax$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/SLAU$rotationMethod$squareSum$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NmLabs/lab1/SLAU$rotationMethod$squareSum$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/SLAU.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NmLabs/lab1/SLAU.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/Lab3_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NmLabs/lab3/Lab3_1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/Lab3_3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NmLabs/lab3/Lab3_3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/MainKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NmLabs/lab3/MainKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/intergration5/Lab3_5$invoke$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NmLabs/lab3/intergration5/Lab3_5$invoke$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/intergration5/Lab3_5$invoke$2.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/intergration5/Lab3_5$y$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NmLabs/lab3/intergration5/Lab3_5$y$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/intergration5/Lab3_5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NmLabs/lab3/intergration5/Lab3_5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/sample/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/sample/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/sample/sample.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lab1/Matrix.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab1/Matrix.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab1/SLAU.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab1/SLAU.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lab3/Lab3_1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/Lab3_1.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab3/Lab3_2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/Lab3_2.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lab3/Lab3_3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/Lab3_3.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab3/Lab3_4.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/Lab3_4.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lab3/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lab3/intergration5/Lab3_5.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/intergration5/Lab3_5.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

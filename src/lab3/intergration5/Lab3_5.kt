@@ -5,10 +5,7 @@ import kotlin.math.pow
 
 object Lab3_5 {
 
-	private val y: (Double) -> Double = { x ->
-//		x / (x.pow(3) + 8)
-		x / (3 * x + 4).pow(2)
-	}
+	private val y: (Double) -> Double = { x -> x / (x.pow(3) + 8) }
 
 	private const val X0 = -1
 	private const val Xk = 1
@@ -67,6 +64,9 @@ object Lab3_5 {
 		)
 
 	operator fun invoke() {
+
+		println("Exercise 3.5")
+
 		println("Integral with step $h1:")
 		val h1Answer = calculate(h1)
 		println(h1Answer.joinToString(separator = "\n", postfix = "\n") { it.toString() })

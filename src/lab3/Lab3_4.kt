@@ -18,6 +18,6 @@ object Lab3_4 {
 
 		val answer = rightBorder + (leftBorder - rightBorder) / (xi[i + 1] - xi[i - 1]) * (2 * xStar - xi[i - 1] - xi[i])
 		println("Exercise 3.4: $answer")
-		println("-------------------------------------------------------")
+		println("-------------------------------------------------------\n")
 	}
 }
