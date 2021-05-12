@@ -1,21 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mac.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/Matrix.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NmLabs/lab1/Matrix.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/Lab3_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NmLabs/lab3/Lab3_1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/Lab3_3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NmLabs/lab3/Lab3_3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/MainKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NmLabs/lab3/MainKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/intergration5/Lab3_5$y$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NmLabs/lab3/intergration5/Lab3_5$y$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/intergration5/Lab3_5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/NmLabs/lab3/intergration5/Lab3_5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab1/Matrix.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab1/Matrix.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/Lab3_1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/Lab3_1.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/Lab3_2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/Lab3_2.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/Lab3_3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/Lab3_3.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/Lab3_4.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/Lab3_4.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab3/intergration5/Lab3_5.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab3/intergration5/Lab3_5.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NmLabs.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javafx-base-14-linux.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javafx-base-14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javafx-controls-14-linux.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javafx-controls-14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javafx-fxml-14-linux.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javafx-fxml-14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javafx-graphics-14-linux.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javafx-graphics-14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/kotlin-reflect-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/kotlin-reflect.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/kotlin-stdlib-jdk7-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/kotlin-stdlib-jdk7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/kotlin-stdlib-jdk8-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/kotlin-stdlib-jdk8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/kotlin-stdlib-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/kotlin-stdlib.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/kotlin-test-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/kotlin-test.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/META-INF/NmLabs.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/MainKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/Matrix$Companion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/Matrix$det$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/Matrix$norm$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/Matrix$times$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/Matrix$times$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/Matrix$toPrint$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/Matrix.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/SLAU$Exercise3$zeidelMethod$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/SLAU$Exercise3$zeidelMethod$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/SLAU$Exercise3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/SLAU$exercise5$finish$1$squareColumnSum$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/SLAU$exercise5$finish$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/SLAU$rotationMethod$findMax$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/SLAU$rotationMethod$squareSum$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab1/SLAU.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab2/IterationMethod.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab2/MainKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab2/NewtonMethod$exercise1$df$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab2/NewtonMethod$exercise1$f$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab2/NewtonMethod$exercise2$derFun1DerX2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab2/NewtonMethod$exercise2$derFun2DerX1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab2/NewtonMethod$exercise2$detA1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab2/NewtonMethod$exercise2$detA2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab2/NewtonMethod$exercise2$detJ$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab2/NewtonMethod$exercise2$function1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab2/NewtonMethod$exercise2$function2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab2/NewtonMethod.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab2/extension/PairExtensionKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/Lab3_1$lagrange$polynomial$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/Lab3_1$lagrange$w4$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/Lab3_1$newton$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/Lab3_1$newton$polynomial$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/Lab3_1$y$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/Lab3_1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/Lab3_2$invoke$f$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/Lab3_2$invoke$hi$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/Lab3_2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/Lab3_3$start$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/Lab3_3$start$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/Lab3_3$start$3$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/Lab3_3$start$funFFirst$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/Lab3_3$start$funFSecond$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/Lab3_3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/Lab3_4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/MainKt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/intergration5/Dot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/intergration5/Lab3_5$invoke$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/intergration5/Lab3_5$invoke$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/intergration5/Lab3_5$y$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/NmLabs/lab3/intergration5/Lab3_5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab1/Main.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab1/Matrix.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab1/SLAU.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab2/IterationMethod.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab2/Main.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab2/NewtonMethod.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab2/extension/PairExtension.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab3/Lab3_1.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab3/Lab3_2.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab3/Lab3_3.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab3/Lab3_4.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab3/Main.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab3/intergration5/Dot.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab3/intergration5/Lab3_5.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,12 +141,31 @@
     <ui_properties converted="true" />
     <breakpoint_rules converted="true" />
   </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Kotlin Enum" />
+        <option value="Kotlin File" />
         <option value="Kotlin Object" />
       </list>
     </option>
@@ -155,22 +252,30 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Libs/javafx-sdk-11.0.2/lib" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.18353345" />
     <property name="project.structure.side.proportion" value="0.35324675" />
     <property name="recentsLimit" value="5" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/javafx/mac" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/javafx/linux" />
+    </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="lab3" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.MainKt">
+  <component name="RunManager" selected="Application.MainKt">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -229,8 +334,14 @@
       </method>
     </configuration>
     <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="Programming.NmLabs.main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
       <option name="MAIN_CLASS_NAME" value="lab3.MainKt" />
-      <module name="NmLabs" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -256,9 +367,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.MainKt" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="Application.MainKt" />
+        <item itemvalue="Application.MainKt" />
+        <item itemvalue="Application.MainKt" />
+        <item itemvalue="Application.MainKt" />
       </list>
     </recent_temporary>
   </component>
