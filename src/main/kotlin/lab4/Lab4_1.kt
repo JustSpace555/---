@@ -2,22 +2,30 @@ package lab4
 
 import kotlin.math.*
 
-object Lab4_1 {
-
-	private const val a = 0
-	private const val b = 1
-	private const val h = 0.1
-
-	private const val y0 = 1.0
-	private const val yStroke0 = 1.0
-
+class Lab4_1(
+	private val a: Int = 0,
+	private val b: Int = 1,
+	private val h: Double = 0.1,
+	private val y0: Double = 1.0,
+	private val yStroke0: Double = 1.0,
+	private val accurateY: (Double) -> Double = { x -> x - x.pow(2) + 1 },
 	private val koshiQuestion: (Double, Double, Double) -> Double = { x, y, z ->
 		(2 * x * z - 2 * y) / (x.pow(2) + 1)
 	}
-	private val accurateY: (Double) -> Double = { x -> x - x.pow(2) + 1 }
+) {
+
+	companion object {
+		fun rrr(h: Double, method: (Double) -> List<Double>): List<Double> {
+			val methodNorm = method(h)
+			val methodHalf = method(h / 2)
+			return methodNorm
+				.zip(methodHalf.filterIndexed { i, _ -> i % 2 == 0 })
+				.map { it.first + (it.second - it.first) / 0.75 }
+		}
+	}
 
 	private fun euler(h: Double = this.h): List<Double> {
-		val x = List( ((b - a) / h).toInt() + 1 ) { index -> index * h }
+		val x = List( ((b - a) / h).toInt() + 1 ) { index -> a + index * h }
 		val y = MutableList(x.size) { y0 }
 		val z = MutableList(x.size) { yStroke0 }
 
@@ -29,10 +37,10 @@ object Lab4_1 {
 		return y
 	}
 
-	fun runge(h: Double = this.h): Pair<List<Double>, List<Double>> {
+	private fun runge(h: Double = this.h): Pair<List<Double>, List<Double>> {
 		val k = MutableList(4) { 0.0 }
 		val l = MutableList(4) { 0.0 }
-		val x = List( ((b - a) / h).toInt() + 1 ) { index -> index * h }
+		val x = List( ((b - a) / h).toInt() + 1 ) { index -> a + index * h }
 		val y = MutableList(x.size) { y0 }
 		val z = MutableList(x.size) { yStroke0 }
 
@@ -52,12 +60,14 @@ object Lab4_1 {
 		return Pair(y, z)
 	}
 
+	fun rungeY(h: Double = this.h) = runge(h).first
+	fun rungeZ(h: Double = this.h) = runge(h).second
+
 	private fun adams(h: Double = this.h): List<Double> {
 
-		val rung = runge(h)
-		val x = List( ((b - a) / h).toInt() + 1 ) { index -> index * h }
-		val y = rung.first.toMutableList()
-		val z = rung.second.toMutableList()
+		val x = List( ((b - a) / h).toInt() + 1 ) { index -> a + index * h }
+		val y = rungeY(h).toMutableList()
+		val z = rungeZ(h).toMutableList()
 
 		val koshiQI: (Int) -> Double = { i -> koshiQuestion(x[i], y[i], z[i]) }
 
@@ -70,51 +80,29 @@ object Lab4_1 {
 		return y
 	}
 
-	private fun RRR(): Triple<List<Double>, List<Double>, List<Double>> {
-
-		val x = List( ((b - a) / h).toInt() + 1 ) { index -> index * h }
-
-		val eulerNorm = euler()
-		val eulerHalf = euler(h / 2)
-
-		val rungeNorm = runge().first
-		val rungeHalf = runge(h / 2).first
-
-		val adamsNorm = adams()
-		val adamsHalf = adams(h / 2)
-
-		val delta: (List<Double>, List<Double>, Int) -> Double = { listNorm, listHalf, i ->
-			listNorm[i] + (listHalf[i * 2] - listNorm[i]) / 0.75
-		}
-
-		return Triple(
-			List(x.size) { i -> delta(eulerNorm, eulerHalf, i) },
-			List(x.size) { i -> delta(rungeNorm, rungeHalf, i) },
-			List(x.size) { i -> delta(adamsNorm, adamsHalf, i) }
-		)
-	}
-
 	operator fun invoke() {
-		val x = List( ((b - a) / h).toInt() + 1 ) { index -> index * h }
+		val x = List( ((b - a) / h).toInt() + 1 ) { index -> a + index * h }
 
 		println("X: $x")
 		println("Accurate y: ${x.map { accurateY(it) }}")
 		println("Euler method: ${euler()}")
-		println("Runge method: ${runge().first}")
+		println("Runge method: ${rungeY()}")
 		println("Adams method: ${adams()}")
 		println()
 
-		val rrr = RRR()
+		val eulerR = rrr(h, ::euler)
+		val rungeR = rrr(h, ::rungeY)
+		val adamsR = rrr(h, ::adams)
 		println("Runge Rombert Richrdson method")
-		println("Euler method: ${rrr.first}")
-		println("Runge method: ${rrr.second}")
-		println("Adams method: ${rrr.third}")
+		println("Euler method: $eulerR")
+		println("Runge method: $rungeR")
+		println("Adams method: $adamsR")
 		println()
 
 		val delta: (Int, Double) -> Double = { i, d -> abs(d - accurateY(x[i])) }
 		println("Delta")
-		println("Euler: ${rrr.first.mapIndexed(delta)}")
-		println("Runge: ${rrr.second.mapIndexed(delta)}")
-		println("Adams: ${rrr.third.mapIndexed(delta)}")
+		println("Euler: ${eulerR.mapIndexed(delta)}")
+		println("Runge: ${rungeR.mapIndexed(delta)}")
+		println("Adams: ${adamsR.mapIndexed(delta)}")
 	}
 }
