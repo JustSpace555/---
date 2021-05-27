@@ -3,7 +3,6 @@ package lab4
 import lab1.Matrix
 import lab1.SLAU
 import java.math.BigDecimal
-import java.math.BigInteger
 import java.math.RoundingMode
 import kotlin.math.E
 import kotlin.math.abs
