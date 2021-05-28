@@ -4,12 +4,14 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <option name="delegatedBuild" value="true" />
+        <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="/usr/local/Cellar/gradle/6.8.2/libexec" />
+        <option name="gradleJvm" value="14" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$" />
+            <option value="/mnt/E29A136D9A133E0B/General/Documents/Вуз/3 курс 2 сем/ЧМ" />
           </set>
         </option>
       </GradleProjectSettings>
