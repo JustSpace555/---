@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/kurs/Kurs.kt" afterDir="false" />
-      <change afterPath="/mnt/E29A136D9A133E0B/General/Documents/Вуз/3 курс 2 сем/ЧМ/src/main/kotlin/kurs/Kurs.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="/mnt/E29A136D9A133E0B/General/Documents/Вуз/3 курс 2 сем/ЧМ/.idea/gradle.xml" beforeDir="false" afterPath="/mnt/E29A136D9A133E0B/General/Documents/Вуз/3 курс 2 сем/ЧМ/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="/mnt/E29A136D9A133E0B/General/Documents/Вуз/3 курс 2 сем/ЧМ/.idea/vcs.xml" beforeDir="false" afterPath="/mnt/E29A136D9A133E0B/General/Documents/Вуз/3 курс 2 сем/ЧМ/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/kurs/Kurs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/kurs/Kurs.kt" afterDir="false" />
       <change beforePath="/mnt/E29A136D9A133E0B/General/Documents/Вуз/3 курс 2 сем/ЧМ/.idea/workspace.xml" beforeDir="false" afterPath="/mnt/E29A136D9A133E0B/General/Documents/Вуз/3 курс 2 сем/ЧМ/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="/mnt/E29A136D9A133E0B/General/Documents/Вуз/3 курс 2 сем/ЧМ/src/main/kotlin/kurs/Kurs.kt" beforeDir="false" afterPath="/mnt/E29A136D9A133E0B/General/Documents/Вуз/3 курс 2 сем/ЧМ/src/main/kotlin/kurs/Kurs.kt" afterDir="false" />
+      <change beforePath="/mnt/E29A136D9A133E0B/General/Documents/Вуз/3 курс 2 сем/ЧМ/src/main/kotlin/lab1/Matrix.kt" beforeDir="false" afterPath="/mnt/E29A136D9A133E0B/General/Documents/Вуз/3 курс 2 сем/ЧМ/src/main/kotlin/lab1/Matrix.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +200,7 @@
       <recent name="lab3" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A">
+  <component name="RunManager" selected="Kotlin.KursKt">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -284,6 +281,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="KursKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kurs.KursKt" />
+      <module name="org.example.NmLabs.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainKt (1)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lab3.MainKt" />
       <module name="org.example.NmLabs.main" />
@@ -315,9 +319,11 @@
       <item itemvalue="Application.A" />
       <item itemvalue="Kotlin.MainKt" />
       <item itemvalue="Kotlin.MainKt (1)" />
+      <item itemvalue="Kotlin.KursKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.KursKt" />
         <item itemvalue="Application.A" />
         <item itemvalue="Kotlin.MainKt (1)" />
       </list>

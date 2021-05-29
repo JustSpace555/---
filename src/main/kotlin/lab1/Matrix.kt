@@ -10,10 +10,10 @@ data class Matrix (val array: MutableList<MutableList<Double>>) {
 
 	init {
 		if (array.isEmpty() || array.all { it.isEmpty() })
-			throw IllegalStateException("lab1.Matrix can not be empty")
+			throw IllegalStateException("Matrix can not be empty")
 
 		if (!array.all { it.size == array[0].size })
-			throw IllegalStateException("lab1.Matrix has different column size")
+			throw IllegalStateException("Matrix has different column size")
 	}
 
 	companion object {
