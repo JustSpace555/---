@@ -44,7 +44,7 @@ fun main() {
 	println("Исходный вид задачи: Ax = b, где A - матрица размером n x n, b - вектор ответов системы уравнений.")
 
 	val n = read<Int>(message = "Введите размерность матрицы A")
-	val A = read<Matrix>(n, n, "Введите матрицу А, в которой числа идут через пробел")
+	val matrixA = read<Matrix>(n, n, "Введите матрицу А, в которой числа идут через пробел")
 	val b = read<Matrix>(1, n, "Введите вектор ответов b, в котором числа идут через пробел").transposed()
 
 	println("Введите вектор начальных данных для x (x0), либо нажмите Enter и будут подставлены нули")
@@ -60,18 +60,18 @@ fun main() {
 			Matrix.of(mutableListOf(MutableList(n) { 0.0 })).transposed()
 	)
 
-	val r = mutableListOf(b - A * x[0])
+	val r = mutableListOf(b - matrixA * x[0])
 	val p = mutableListOf(r[0].copy())
 
 
 	val calculateNewAlpha: (i: Int) -> Double = { i ->
-		(r[i].transposed() * r[i])[0, 0] / (p[i].transposed() * A * p[i])[0, 0]
+		(r[i].transposed() * r[i])[0, 0] / (p[i].transposed() * matrixA * p[i])[0, 0]
 	}
 	val alpha = mutableListOf<Double>()
 
 
 	val calculateNewX: (i: Int) -> Matrix = { i -> x[i - 1] + p[i - 1] * alpha[i - 1] }
-	val calculateNewR: (i: Int) -> Matrix = { i -> r[i - 1] -  A * alpha[i - 1] * p[i - 1] }
+	val calculateNewR: (i: Int) -> Matrix = { i -> r[i - 1] -  matrixA * alpha[i - 1] * p[i - 1] }
 
 	val calculateNewBeta: (i: Int) -> Double = { i ->
 		(r[i + 1].transposed() * r[i + 1])[0, 0] / (r[i].transposed() * r[i])[0, 0]
