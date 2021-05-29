@@ -40,7 +40,6 @@ private inline fun <reified T : Any> read(n: Int = 0, m: Int = 0, message: Strin
 }
 
 fun main() {
-	val scanner = Scanner(System.`in`)
 
 	println("Исходный вид задачи: Ax = b, где A - матрица размером n x n, b - вектор ответов системы уравнений.")
 
