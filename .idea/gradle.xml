@@ -11,7 +11,7 @@
         <option name="gradleJvm" value="14" />
         <option name="modules">
           <set>
-            <option value="/mnt/E29A136D9A133E0B/General/Documents/Вуз/3 курс 2 сем/ЧМ" />
+            <option value="$PROJECT_DIR$" />
           </set>
         </option>
       </GradleProjectSettings>

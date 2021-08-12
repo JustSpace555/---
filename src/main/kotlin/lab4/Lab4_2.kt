@@ -130,13 +130,13 @@ object Lab4_2 {
 		println("Accurate y: ${x.map { accurateY(it) }}")
 		println("Shooting method: ${shootingMethod()}")
 
-		val shootingR = Lab4_1.rrr(h, ::shootingMethod)
-		val delta: (Int, Double) -> Double = { i, d -> abs(d - accurateY(x[i])) }
-		println("Runge Rombert Richrdson method:")
-		println("Shooting: $shootingR")
-		println("Delta")
-		println("Shooting: ${shootingR.mapIndexed(delta)}")
-		println("------------------------------------------")
-		println("Final Difference method: ${finalDifferenceMethod()}")
+//		val shootingR = Lab4_1.rrr(h, ::shootingMethod)
+//		val delta: (Int, Double) -> Double = { i, d -> abs(d - accurateY(x[i])) }
+//		println("Runge Rombert Richrdson method:")
+//		println("Shooting: $shootingR")
+//		println("Delta")
+//		println("Shooting: ${shootingR.mapIndexed(delta)}")
+//		println("------------------------------------------")
+//		println("Final Difference method: ${finalDifferenceMethod()}")
 	}
 }
