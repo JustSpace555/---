@@ -1,8 +1,8 @@
 package kurs
 
+import extensions.read
+import extensions.readMatrix
 import lab1.Matrix
-import java.lang.IllegalArgumentException
-import java.lang.NumberFormatException
 import java.util.*
 
 /*
@@ -13,39 +13,15 @@ import java.util.*
 				размерности. Метод сопряженных градиентов.
 */
 
-private val scanner = Scanner(System.`in`)
-
-private inline fun <reified T : Any> read(n: Int = 0, m: Int = 0, message: String = ""): T {
-	println(message)
-
-	return when(T::class) {
-		Matrix::class -> {
-			val input = mutableListOf<List<Double>>()
-			for (i in 0 until n) {
-				val inputRow = scanner.nextLine().split(' ')
-				if (inputRow.size != m)
-					throw IllegalArgumentException("Размер введенной строки больше необходимого")
-				try {
-					input.add(inputRow.map { it.toDouble() })
-				} catch (e: NumberFormatException) {
-					throw NumberFormatException("Невверный формат входного числа для матрицы")
-				}
-			}
-			Matrix.of(input) as T
-		}
-		Double::class -> scanner.nextLine().toDouble() as T
-		Int::class -> scanner.nextLine().toInt() as T
-		else -> throw IllegalArgumentException("Указан неверный тип для считывания со стандартного ввода")
-	}
-}
-
 fun main() {
+
+	val scanner = Scanner(System.`in`)
 
 	println("Исходный вид задачи: Ax = b, где A - матрица размером n x n, b - вектор ответов системы уравнений.")
 
-	val n = read<Int>(message = "Введите размерность матрицы A")
-	val matrixA = read<Matrix>(n, n, "Введите матрицу А, в которой числа идут через пробел")
-	val b = read<Matrix>(1, n, "Введите вектор ответов b, в котором числа идут через пробел").transposed()
+	val n = read<Int>("Введите размерность матрицы A")
+	val matrixA = readMatrix(n, n, "Введите матрицу А, в которой числа идут через пробел")
+	val b = readMatrix(1, n, "Введите вектор ответов b, в котором числа идут через пробел").transposed()
 
 	println("Введите вектор начальных данных для x (x0), либо нажмите Enter и будут подставлены нули")
 	val input = scanner.nextLine()

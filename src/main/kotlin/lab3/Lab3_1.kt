@@ -16,12 +16,12 @@ internal object Lab3_1 {
 		val w4: (Double, Int?) -> Double = { x, i ->
 			i?.let { index ->
 				var times = 1.0
-				with (xiLagrange.toMutableList()) {
+				with(xiLagrange.toMutableList()) {
 					removeAt(index)
 					forEach { xi -> times *= (x - xi) }
 				}
 				times
-			} ?: (x - xiLagrange[0]) * (x - xiLagrange[1]) * (x - xiLagrange[2]) * (x - xiLagrange[3])
+			} ?: ((x - xiLagrange[0]) * (x - xiLagrange[1]) * (x - xiLagrange[2]) * (x - xiLagrange[3]))
 		}
 
 		val polynomial: (Double, List<Double>) -> Double = { x, list ->
