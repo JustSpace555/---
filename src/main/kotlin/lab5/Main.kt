@@ -30,7 +30,7 @@ private fun explicitFiniteDifferenceSolution(
 	val secondLayer = MutableList(firstLayer.size) { 0.0 }
 	secondLayer[secondLayer.lastIndex] = 1.0
 
-	for (i in 1..t.size) {
+	for (i in 1 until t.lastIndex) {
 		for (j in 1 until x.lastIndex) {
 			secondLayer[j] = (1 - 2 * sigma) * firstLayer[j] + sigma * (firstLayer[j - 1] + firstLayer[j + 1])
 		}
@@ -47,66 +47,38 @@ private fun solveTriDiagMethod(
 	vecC: List<Double>,
 	vecD: List<Double>
 ): List<Double> {
-	val n = vecD.size
-	return emptyList()
-//	val roots =
-	/*
-	val result = MutableList(vecD.size) { 0.0 }
-	val p = mutableListOf(-vecC[0] / vecB[0])
-	val q = mutableListOf(vecD[0] / vecB[0])
+	val p = MutableList(vecD.size) { 0.0 }.apply { this[0] = -vecC[0] / vecB[0] }
+	val q = MutableList(vecD.size) { 0.0 }.apply { this[0] = vecD[0] / vecB[0] }
 
-	for (i in 1..vecD.lastIndex) {
+	for (i in 1 until vecD.lastIndex) {
 		val calc = vecB[i] + vecA[i - 1] * p[i - 1]
-		p.add(-vecC[i] / calc)
-		q.add((vecD[i] - vecA[i - 1] * q[i - 1]) / calc)
+		p[i] = -vecC[i] / calc
+		q[i] = (vecD[i] - vecA[i - 1] * q[i - 1]) / calc
 	}
 
 	q[q.lastIndex] = (vecD.last() - vecA.last() * q[q.lastIndex - 1]) / (vecB.last() + vecA.last() * p[p.lastIndex - 1])
-	result[result.lastIndex] = q.last()
 
-	val count: (Int) -> Double = { i -> p[i] * result[i + 1] + q[i] }
-	for (i in q.lastIndex - 1 downTo 0) result[i] = count(i)
-	result[result.lastIndex] = count(result.lastIndex)
+	val result = MutableList(vecD.size) { 0.0 }.apply { this[lastIndex] = q.last() }
+	for (i in q.lastIndex - 1 downTo 0) result[i] = p[i] * result[i + 1] + q[i]
 
 	return result
-	 */
 }
 
 private fun implicitFiniteDifferenceSolution(x: List<Double>, t: List<Double>, sigma: Double): List<Double> {
-	var vecD = MutableList(x.size) { 1.0 }
-	val grid = MutableList(t.size) { MutableList(x.size) { 0.0 } }
-
-	for (i in grid.indices) grid[i][grid[i].lastIndex] = 1.0
+	var vecD = MutableList(x.size) { i -> function(x[i]) }.slice(1 until x.lastIndex)
+	val grid = mutableListOf(listOf(0.0) + vecD + 1.0)
 
 	val vecA = MutableList(vecD.size - 1) { -sigma }
 	val vecC = MutableList(vecD.size - 1) { -sigma }
 	val vecB = MutableList(vecD.size) { 1 + 2 * sigma }
 
-	for (i in 1..t.size) {
+	for (i in 1..t.lastIndex) {
 		vecD = solveTriDiagMethod(vecA, vecB, vecC, vecD).toMutableList()
 		if (i < t.size - 1) vecD[vecD.lastIndex] += sigma
-
-		for (i in grid.indices) {
-			for (j in 1..grid[i].lastIndex - 1) {
-				grid[i][j] = vecD[i]
-			}
-		}
+		grid.add(listOf(0.0) + vecD + 1.0)
 	}
 
 	return grid.last()
-//	var vecD = x.map { function(it) }.slice(1 until x.lastIndex).toMutableList()
-//	vecD[vecD.lastIndex] += sigma
-//
-//	val vecA = List(vecD.lastIndex) { -sigma }
-//	val vecB = List(vecD.size) { 1 + 2 * sigma }
-//	val vecC = List(vecD.lastIndex) { -sigma }
-//
-//	for (i in 1..t.size) {
-//		vecD = solveTriDiagMethod(vecA, vecB, vecC, vecD.toList()).toMutableList()
-//		if (i < t.lastIndex) vecD[vecD.lastIndex] += sigma
-//	}
-//
-//	return listOf(0.0) + vecD + listOf(1.0)
 }
 
 private fun crankNickolsonSolution(x: List<Double>, t: List<Double>, oldSigma: Double): List<Double> {
@@ -155,11 +127,11 @@ fun main() {
 	val analyticalSolutionDots = analyticalSolution(xDots, tDots, a)
 	println("Аналитическое решение: $analyticalSolutionDots\n")
 
-	val explicitFiniteDifferenceDots = explicitFiniteDifferenceSolution(xDots, tDots, sigma)
-	println("Явный метод конечных разностей: $explicitFiniteDifferenceDots\n")
+//	val explicitFiniteDifferenceDots = explicitFiniteDifferenceSolution(xDots, tDots, sigma)
+//	println("Явный метод конечных разностей: $explicitFiniteDifferenceDots\n")
 
-//	val implicitFiniteDifferenceDots = implicitFiniteDifferenceSolution(xDots, tDots, sigma)
-//	println("Неявный метод конечных разностей: $implicitFiniteDifferenceDots\n")
+	val implicitFiniteDifferenceDots = implicitFiniteDifferenceSolution(xDots, tDots, sigma)
+	println("Неявный метод конечных разностей: $implicitFiniteDifferenceDots\n")
 //
 //	val crankNickolsonDots = crankNickolsonSolution(xDots, tDots, sigma)
 //	println("Метод Кранка-Николсона: $crankNickolsonDots\n")
