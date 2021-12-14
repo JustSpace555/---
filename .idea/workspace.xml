@@ -4,9 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Explicit function done">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Implicit function done">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/extensions/GetSeries.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/extensions/Replace.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/sem2/extensions/TriDiagSolve.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/sem2/lab5/Lab5.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/sem2/lab6/Lab6.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/sem2/lab7/Lab7.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/lab5/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/lab5/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/extensions/Read.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/extensions/Read.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/kurs/Kurs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sem1/kurs/Kurs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/lab1/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sem1/lab1/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/lab1/Matrix.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sem1/lab1/Matrix.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/lab1/SLAU.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sem1/lab1/SLAU.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/lab2/IterationMethod.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sem1/lab2/IterationMethod.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/lab2/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sem1/lab2/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/lab2/NewtonMethod.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sem1/lab2/NewtonMethod.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/lab2/extension/PairExtension.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sem1/lab2/extension/PairExtension.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/lab3/Lab3_1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sem1/lab3/Lab3_1.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/lab3/Lab3_2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sem1/lab3/Lab3_2.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/lab3/Lab3_3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sem1/lab3/Lab3_3.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/lab3/Lab3_4.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sem1/lab3/Lab3_4.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/lab3/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sem1/lab3/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/lab3/intergration5/Dot.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sem1/lab3/intergration5/Dot.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/lab3/intergration5/Lab3_5.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sem1/lab3/intergration5/Lab3_5.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/lab4/Lab4_1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sem1/lab4/Lab4_1.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/lab4/Lab4_2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sem1/lab4/Lab4_2.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/lab4/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sem1/lab4/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/lab5/Main.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/lab5/Plot.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,8 +106,8 @@
       <list>
         <option value="Kotlin Enum" />
         <option value="Kotlin Object" />
-        <option value="Class" />
         <option value="Kotlin File" />
+        <option value="Class" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -186,7 +213,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.18353345" />
     <property name="project.structure.side.proportion" value="0.35324675" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor.code.editing" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -199,7 +226,7 @@
       <recent name="lab3" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.MainKt (1)">
+  <component name="RunManager" selected="Kotlin.Lab7Kt">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -225,13 +252,13 @@
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
-    <configuration name="A" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lab4.A" />
+    <configuration name="Chart3dDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sem2.lab7.Chart3dDemo" />
       <module name="org.example.NmLabs.main" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="sem1.lab4.*" />
+          <option name="PATTERN" value="sem2.lab7.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -271,23 +298,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KursKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sem1.kurs.KursKt" />
-      <module name="Programming.NmLabs.main" />
+    <configuration name="Chart3dDemo" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sem2.lab7.Chart3dDemo" />
+      <module name="org.example.NmLabs.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainKt (1)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lab5.MainKt" />
+    <configuration name="Chart3dDemoKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sem2.lab7.Chart3dDemoKt" />
+      <module name="org.example.NmLabs.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Lab6Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sem2.lab6.Lab6Kt" />
+      <module name="org.example.NmLabs.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Lab7Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sem2.lab7.Lab7Kt" />
       <module name="org.example.NmLabs.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sem1.lab4.MainKt" />
-      <module name="Programming.NmLabs.main" />
+      <option name="MAIN_CLASS_NAME" value="sem1.lab3.MainKt" />
+      <module name="org.example.NmLabs.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -322,16 +363,20 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.A" />
-      <item itemvalue="Kotlin.KursKt" />
+      <item itemvalue="Application.Chart3dDemo" />
       <item itemvalue="Kotlin.MainKt" />
-      <item itemvalue="Kotlin.MainKt (1)" />
+      <item itemvalue="Kotlin.Lab6Kt" />
+      <item itemvalue="Kotlin.Lab7Kt" />
+      <item itemvalue="Kotlin.Chart3dDemo" />
+      <item itemvalue="Kotlin.Chart3dDemoKt" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.MainKt (1)" />
-        <item itemvalue="Kotlin.MainKt (1)" />
-        <item itemvalue="Application.A" />
+        <item itemvalue="Kotlin.Lab7Kt" />
+        <item itemvalue="Kotlin.Lab6Kt" />
+        <item itemvalue="Kotlin.Chart3dDemoKt" />
+        <item itemvalue="Kotlin.Chart3dDemo" />
+        <item itemvalue="Application.Chart3dDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -352,7 +397,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638140027048</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Implicit function done">
+      <created>1638144762082</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1638144762082</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -407,7 +459,12 @@
       <path value="/mnt/E29A136D9A133E0B/General/Documents/Вуз/3 курс 2 сем/ЧМ" />
     </ignored-roots>
     <MESSAGE value="Explicit function done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Explicit function done" />
+    <MESSAGE value="Implicit function done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implicit function done" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
