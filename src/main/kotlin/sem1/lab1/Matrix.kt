@@ -49,6 +49,9 @@ data class Matrix (val array: MutableList<MutableList<Double>>) {
 	val rowIndices = array.indices
 	val columnIndices = array[0].indices
 
+	val rowsLastIndex = array.lastIndex
+	val columnLastIndex = array[0].lastIndex
+
 	val det: Double by lazy {
 		if (!isSquare) throw IllegalStateException("Can't calculate determinant for nonsquare matrix")
 
