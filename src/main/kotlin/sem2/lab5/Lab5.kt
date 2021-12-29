@@ -86,10 +86,10 @@ class Lab5 : Application() {
 	}
 
 	override fun start(primaryStage: Stage?) {
-		val t = read<Double>("Введите t") //0.01
-		val n = read<Double>("Введите n") //25.0
-		val k = read<Double>("Введите k") //50.0
-		val a = read<Double>("Введите a") //1.0
+		val t = 0.01
+		val n = 25.0
+		val k = 50.0
+		val a = 1.0
 
 		val tau = t / k
 		val h = 1 / n
@@ -120,7 +120,7 @@ class Lab5 : Application() {
 				throw IllegalArgumentException("Solutions have not equal sizes")
 			}
 
-			val lineChart = LineChart(NumberAxis(), NumberAxis()).apply { title = "Лабораторная работа №5" }
+			val lineChart = LineChart(NumberAxis(), NumberAxis()).apply { title = "Лабораторная работа №1" }
 
 			val x = List(xSize) { it }
 

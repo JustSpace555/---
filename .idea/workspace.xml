@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Implicit function done">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/sem2/lab8/Lab8.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/sem2/lab8/lab8.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/sem2/lab7/lab7.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/sem1/lab1/Matrix.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sem1/lab1/Matrix.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/sem2/lab5/Lab5.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sem2/lab5/Lab5.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/sem2/lab6/Lab6.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sem2/lab6/Lab6.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/sem2/lab8/Lab8.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sem2/lab8/Lab8.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/sem2/lab8/lab8.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sem2/lab8/lab8.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,10 +191,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.18353345" />
     <property name="project.structure.side.proportion" value="0.35324675" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -206,7 +207,7 @@
       <recent name="lab3" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.Lab8Kt">
+  <component name="RunManager" selected="Application.Lab7Kt">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -264,44 +265,67 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Chart3dDemoKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sem2.lab7.Chart3dDemoKt" />
+    <configuration name="Lab5Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="org.example.NmLabs.main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="sem2.lab5.Lab5Kt" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Lab6Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sem2.lab6.Lab6Kt" />
       <module name="org.example.NmLabs.main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="sem2.lab6.Lab6Kt" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Lab7Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sem2.lab7.Lab7Kt" />
       <module name="org.example.NmLabs.main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="sem2.lab7.Lab7Kt" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Lab8Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sem2.lab8.Lab8Kt" />
       <module name="org.example.NmLabs.main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="sem2.lab8.Lab8Kt" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="MainKt (1)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="org.example.NmLabs.main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
       <option name="MAIN_CLASS_NAME" value="sem1.lab1.MainKt" />
-      <module name="org.example.NmLabs.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="sem1.lab3.MainKt" />
-      <module name="org.example.NmLabs.main" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -329,19 +353,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="Kotlin.Lab6Kt" />
-      <item itemvalue="Kotlin.Lab7Kt" />
-      <item itemvalue="Kotlin.Chart3dDemoKt" />
-      <item itemvalue="Kotlin.MainKt (1)" />
-      <item itemvalue="Kotlin.Lab8Kt" />
+      <item itemvalue="Application.Lab8Kt" />
+      <item itemvalue="Application.MainKt (1)" />
+      <item itemvalue="Application.Lab5Kt" />
+      <item itemvalue="Application.Lab6Kt" />
+      <item itemvalue="Application.Lab7Kt" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.Lab8Kt" />
-        <item itemvalue="Kotlin.Lab7Kt" />
-        <item itemvalue="Kotlin.MainKt (1)" />
-        <item itemvalue="Kotlin.Lab6Kt" />
-        <item itemvalue="Kotlin.Chart3dDemoKt" />
+        <item itemvalue="Application.Lab7Kt" />
+        <item itemvalue="Application.Lab8Kt" />
+        <item itemvalue="Application.Lab6Kt" />
+        <item itemvalue="Application.Lab5Kt" />
       </list>
     </recent_temporary>
   </component>
@@ -369,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638144762082</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Implicit function done">
+      <created>1640652586934</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1640652586934</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -415,6 +445,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />

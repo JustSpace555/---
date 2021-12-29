@@ -169,7 +169,7 @@ class Lab6 : Application() {
 
 			if (sizes.any { it != xSize }) throw IllegalStateException("Solutions have not equal sizes")
 
-			val lineChart = LineChart(NumberAxis(), NumberAxis()).apply { title = "Лабораторная работа №6" }
+			val lineChart = LineChart(NumberAxis(), NumberAxis()).apply { title = "Лабораторная работа №2" }
 
 			val x = List(xSize) { it }
 

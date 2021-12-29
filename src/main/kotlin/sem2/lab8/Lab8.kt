@@ -7,51 +7,48 @@ import java.io.File
 import java.util.*
 import kotlin.math.*
 
-class Lab8 {
+class Lab8(
+	private val x: List<Double>,
+	private val y: List<Double>,
+	private val t: List<Double>,
+	private val mu1: Double,
+	private val mu2: Double,
+	private val a: Double
+) {
 
-	private fun getCalc(t: Double, mu1: Double, mu2: Double, a: Double) =
-		exp(-(mu1.pow(2) + mu2.pow(2)) * a * t)
+	private fun getCalc(t: Double) = exp(-(mu1.pow(2) + mu2.pow(2)) * a * t)
 
-	private fun ux(y: Double, t: Double, mu1: Double, mu2: Double, a: Double) =
-		cos(mu2 * y) * getCalc(t, mu1, mu2, a)
-	private fun ux(y: List<Double>, t: Double, mu1: Double, mu2: Double, a: Double) = y.map { yi ->
-		cos(mu2 * yi) * getCalc(t, mu1, mu2, a)
+	private fun ux(y: Double, t: Double) = cos(mu2 * y) * getCalc(t)
+	private fun ux(t: Double) = y.map { yi -> cos(mu2 * yi) * getCalc(t) }
+
+	private fun uy(x: Double, t: Double) = cos(mu1 * x) * getCalc(t)
+	private fun uy(t: Double) = x.map { xi -> cos(mu1 * xi) * getCalc(t) }
+
+	private fun ut(x: Double, y: Double) = cos(mu1 * x) * cos(mu2 * y)
+
+	private fun Matrix.changeGrid(row: List<Double>, column: List<Double>) {
+		replaceRow(0, row)
+		replaceColumn(0, column)
+		replaceRow(rowsLastIndex, List(columns) { 0.0 })
+		replaceColumn(columnLastIndex, List(rows) { 0.0 })
 	}
 
-	private fun uy(x: Double, t: Double, mu1: Double, mu2: Double, a: Double) =
-		cos(mu1 * x) * getCalc(t, mu1, mu2, a)
-	private fun uy(x: List<Double>, t: Double, mu1: Double, mu2: Double, a: Double) = x.map { xi ->
-		cos(mu1 * xi) * getCalc(t, mu1, mu2, a)
-	}
-
-	private fun ut(x: Double, y: Double, mu1: Double, mu2: Double) = cos(mu1 * x) * cos(mu2 * y)
-	private fun ut(x: List<Double>, y: List<Double>, mu1: Double, mu2: Double) = x.zip(y).map { (xi, yi) ->
-		cos(mu1 * xi) * cos(mu2 * yi)
-	}
-
-	fun alternatingDir(
-		x: List<Double>,
-		y: List<Double>,
-		t: List<Double>,
-		mu1: Double,
-		mu2: Double,
-		a: Double
-	): List<Matrix> {
+	fun alternatingDir(): List<Matrix> {
 		val grid = MutableList(t.size) { Matrix.getEmptyMatrix(x.size, y.size) }
-		val dx = x[1] - x[0]
-		val dy = y[1] - y[0]
 		val dt = t[1] - t[0]
 
-		val sigma1 = a * dt / dx.pow(2)
-		val sigma2 = a * dt / dy.pow(2)
+		val sigma1 = a * dt / (x[1] - x[0]).pow(2)
+		val sigma2 = a * dt / (y[1] - y[0]).pow(2)
 
-		for (j in y.indices)
-			for (i in x.indices)
-				grid[0][i, j] = ut(x[i], y[j], mu1, mu2)
+		y.forEachIndexed { j, yj ->
+			x.forEachIndexed { i, xi ->
+				grid[0][i, j] = ut(xi, yj)
+			}
+		}
 
 		for (k in 1..t.lastIndex) {
-			for (j in y.indices) grid[k][0, j] = ux(y[j], t[k], mu1, mu2, a)
-			for (i in x.indices) grid[k][i, 0] = uy(x[i], t[k], mu1, mu2, a)
+			y.forEachIndexed { j, yj -> grid[k][0, j] = ux(yj, t[k]) }
+			x.forEachIndexed { i, xi -> grid[k][i, 0] = uy(xi, t[k]) }
 		}
 
 		val vecA1 = MutableList(y.size) { sigma1 / 2 }.apply { this[lastIndex] = 0.0 }
@@ -74,17 +71,14 @@ class Lab8 {
 							) - grid[k - 1][i, j]
 				}
 
-				vecD1[0] = uy(x[i], t[k] - dt / 2, mu1, mu2, a)
-				vecD1[vecD1.lastIndex] = 0.0
+				vecD1.apply {
+					set(0, uy(x[i], t[k] - dt / 2))
+					set(lastIndex, 0.0)
+				}
 				tempGrid.replaceRow(i, solveTriDiagMethod(vecA1, vecB1, vecC1, vecD1))
 			}
 
-			with(tempGrid) {
-				replaceRow(0, ux(y, t[k] - dt / 2, mu1, mu2, a))
-				replaceColumn(0, uy(x, t[k] - dt / 2, mu1, mu2, a))
-				replaceRow(rowsLastIndex, List(columns) { 0.0 })
-				replaceColumn(columnLastIndex, List(rows) { 0.0 })
-			}
+			tempGrid.changeGrid(ux(t[k] - dt / 2), uy(t[k] - dt / 2))
 
 			for (j in 1 until y.lastIndex) {
 				for (i in 1 until x.lastIndex)
@@ -92,50 +86,39 @@ class Lab8 {
 						tempGrid[i, j + 1] - 2 * tempGrid[i, j] + tempGrid[i, j - 1]
 					) - tempGrid[i, j]
 
-				vecD2[0] = ux(y[j], t[k], mu1, mu2, a)
-				vecD2[vecD2.lastIndex] = 0.0
+				vecD2.apply {
+					set(0, ux(y[j], t[k]))
+					set(lastIndex, 0.0)
+				}
 				grid[k].replaceColumn(j, solveTriDiagMethod(vecA2, vecB2, vecC2, vecD2))
 			}
 
-			with(grid[k]) {
-				replaceRow(0, ux(y, t[k], mu1, mu2, a))
-				replaceColumn(0, uy(x, t[k], mu1, mu2, a))
-				replaceColumn(columnLastIndex, List(rows) { 0.0 })
-				replaceRow(rowsLastIndex, List(columns) { 0.0 })
-			}
+			grid[k].changeGrid(ux(t[k]), uy(t[k]))
 		}
 
-		grid.replaceAll { it.transposed() }
 		return grid
 	}
 
-	fun fractionSteps(
-		x: List<Double>,
-		y: List<Double>,
-		t: List<Double>,
-		mu1: Double,
-		mu2: Double,
-		a: Double
-	): List<Matrix> {
+	fun fractionSteps(): List<Matrix> {
 		val grid = MutableList(t.size) { Matrix.getEmptyMatrix(x.size, y.size) }
-		val dx = x[1] - x[0]
-		val dy = y[1] - y[0]
 		val dt = t[1] - t[0]
 
-		val sigma1 = a * dt / dx.pow(2)
-		val sigma2 = a * dt / dy.pow(2)
+		val sigma1 = a * dt / (x[1] - x[0]).pow(2)
+		val sigma2 = a * dt / (y[1] - y[0]).pow(2)
 
-		for (j in y.indices)
-			for (i in x.indices)
-				grid[0][i, j] = ut(x[i], y[i], mu1, mu2)
+		y.forEachIndexed { j, yj ->
+			x.forEachIndexed { i, xi ->
+				grid[0][i, j] = ut(xi, yj)
+			}
+		}
 
 		for (k in 1..t.lastIndex) {
-			for (j in y.indices) grid[k][0, j] = ux(y[j], t[k], mu1, mu2, a)
-			for (i in x.indices) grid[k][i, 0] = uy(x[i], t[k], mu1, mu2, a)
+			y.forEachIndexed { j, yj -> grid[k][0, j] = ux(yj, t[k]) }
+			x.forEachIndexed { i, xi -> grid[k][i, 0] = uy(xi, t[k]) }
 		}
 
 		val vecA1 = MutableList(y.size) { sigma1 }.apply { this[lastIndex] = 0.0 }
-		val vecB1 = MutableList(y.size) { -1 -2 * sigma1 }.apply { this[0] = 1.0; this[lastIndex] = 1.0 }
+		val vecB1 = MutableList(y.size) { -1 - 2 * sigma1 }.apply { this[0] = 1.0; this[lastIndex] = 1.0 }
 		val vecC1 = MutableList(y.size) { sigma1 }.apply { this[0] = 0.0 }
 		val vecD1 = MutableList(y.size) { 0.0 }
 
@@ -149,34 +132,29 @@ class Lab8 {
 
 			for (i in 1 until x.lastIndex) {
 				for (j in 1 until y.lastIndex) vecD1[j] = -grid[k - 1][i, j]
-				vecD1[0] = uy(x[i], t[k] - dt / 2, mu1, mu2, a)
-				vecD1[vecD1.lastIndex] = 0.0
+
+				vecD1.apply {
+					set(0, uy(x[i], t[k] - dt / 2))
+					set(lastIndex, 0.0)
+				}
 				tempGrid.replaceRow(i, solveTriDiagMethod(vecA1, vecB1, vecC1, vecD1))
 			}
 
-			with(tempGrid) {
-				replaceRow(0, ux(y, t[k] - dt / 2, mu1, mu2, a))
-				replaceColumn(0, uy(x, t[k] - dt / 2, mu1, mu2, a))
-				replaceColumn(columnLastIndex, List(rows) { 0.0 })
-				replaceRow(rowsLastIndex, List(columns) { 0.0 })
-			}
+			tempGrid.changeGrid(ux(t[k] - dt / 2), uy(t[k] - dt / 2))
 
 			for (j in 1 until y.lastIndex) {
 				for (i in 1 until x.lastIndex) vecD2[i] = -tempGrid[i, j]
-				vecD2[0] = ux(y[j], t[k], mu1, mu2, a)
-				vecD2[vecD2.lastIndex] = 0.0
+
+				vecD2.apply {
+					set(0, ux(y[j], t[k]))
+					set(lastIndex, 0.0)
+				}
 				grid[k].replaceColumn(j, solveTriDiagMethod(vecA2, vecB2, vecC2, vecD2))
 			}
 
-			with(grid[k]) {
-				replaceRow(0, ux(y, t[k], mu1, mu2, a))
-				replaceColumn(0, uy(x, t[k], mu1, mu2, a))
-				replaceColumn(columnLastIndex, List(rows) { 0.0 })
-				replaceRow(rowsLastIndex, List(columns) { 0.0 })
-			}
+			grid[k].changeGrid(ux(t[k]), uy(t[k]))
 		}
 
-		grid.replaceAll { it.transposed() }
 		return grid
 	}
 }
@@ -200,14 +178,15 @@ fun main() {
 	val y = 0.0 arrangeTo ly + dy withStep dy
 	val t = 0.0 arrangeTo lt + dt withStep dt
 
-	val lab = Lab8()
-	val alternating = lab.alternatingDir(x, y, t, mu1, mu2, a)
-	val fractionSteps = lab.fractionSteps(x, y, t, mu1, mu2, a)
+	val lab = Lab8(x, y, t, mu1, mu2, a)
+	val alternating = lab.alternatingDir()
+	val fractionSteps = lab.fractionSteps()
 
 	val labPath = "src/main/kotlin/sem2/lab8"
 
 	File(labPath / "x").writeText(x.joinToString(" "))
 	File(labPath / "y").writeText(y.joinToString(" "))
+	File(labPath / "t").writeText(t.joinToString(" "))
 
 	File(labPath / "alternating").writeText(
 		alternating.joinToString("\n") { matrix ->
@@ -224,6 +203,8 @@ fun main() {
 	//Нет поддержки для запуска в Windows
 	val process = Runtime.getRuntime().exec("python3 ${labPath / "lab8.py"}")
 
-	val scanner = Scanner(process.errorStream)
-	while (scanner.hasNextLine()) println(scanner.nextLine())
+	val errorScanner = Scanner(process.errorStream)
+	val outputScanner = Scanner(process.inputStream)
+	while (errorScanner.hasNextLine()) println(errorScanner.nextLine())
+	while(outputScanner.hasNextLine()) println(outputScanner.nextLine())
 }
